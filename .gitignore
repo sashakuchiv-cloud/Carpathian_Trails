@@ -1,0 +1,26 @@
+# Local operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.bak
+
+# Local dependencies, caches and test artifacts
+node_modules/
+__pycache__/
+.pytest_cache/
+coverage/
+dist/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Reports and screenshots belong outside the public website repository
+*.docx
+*.pdf
+Screenshots/
