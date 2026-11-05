@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Зелені стежки Карпат: порівнюйте демонстраційні маршрути, плануйте похід і перевіряйте погоду перед мандрівкою." />
+    <meta name="theme-color" content="#1f6b4f" />
+    <title>Зелені стежки Карпат — маршрути для вашої мандрівки</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>                                                                       
+  <body id="top">
+    <a class="skip-link" href="#content">Перейти до основного вмісту</a>
+
+    <header class="site-header">
+      <div class="container header-inner flex items-center justify-between gap-6">
+        <a class="brand" href="#top" aria-label="Зелені стежки Карпат — на початок сторінки">
+          <img src="assets/images/logo.svg" alt="" width="40" height="40" />
+          <span>Зелені стежки <strong>Карпат</strong></span>
+        </a>
+        <nav class="main-nav hidden lg:block" aria-label="Основна навігація">
+          <ul class="flex items-center gap-5 xl:gap-8">
+            <li><a href="#benefits">Переваги</a></li>
+            <li><a href="#routes">Маршрути</a></li>
+            <li><a href="#planning">Планування</a></li>
+            <li><a href="#media">Медіа</a></li>
+            <li><a href="#location">Локація</a></li>
+          </ul>
+        </nav>
+        <a class="button button-primary header-cta hidden lg:inline-flex transition-colors duration-200 hover:bg-[#15563e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a>
+        <button class="menu-toggle inline-flex lg:hidden items-center justify-center rounded-lg transition-colors hover:bg-[#f1f5ef] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" type="button" aria-label="Відкрити меню" aria-controls="mobile-navigation" aria-expanded="false">
+          <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav lg:hidden" id="mobile-navigation" aria-label="Мобільна навігація" hidden>
+        <ul class="container grid grid-cols-1 gap-1 py-3">
+          <li><a href="#benefits">Переваги</a></li>
+          <li><a href="#routes">Маршрути</a></li>
+          <li><a href="#planning">Планування</a></li>
+          <li><a href="#media">Медіа</a></li>
+          <li><a href="#location">Локація</a></li>
+          <li><a class="mobile-nav-cta" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner flex flex-col lg:flex-row items-center gap-0 lg:gap-8">
+          <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Ваша подорож починається тут</p>
+            <h1 id="hero-title">Відкрий Карпати <span>безпечно</span></h1>
+            <p class="hero-lead">Знайдіть стежку до душі, продумайте похід і збережіть важливе перед виходом у гори.</p>
+            <div class="hero-actions">
+              <a class="button button-primary w-full sm:w-auto transition-all duration-200 hover:bg-[#15563e] active:translate-y-0" href="#routes">Підібрати маршрут <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="#planning">Як це працює <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="hero-note"><span aria-hidden="true">✓</span> Продуманий маршрут — більше часу для вражень</p>
+          </div>
+          <div class="hero-visual">
+            <img src="assets/images/karpaty-hero.png" alt="Ілюстрація Карпатських гір, туристичного рюкзака та схеми маршруту" width="1376" height="768" fetchpriority="high" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section benefits" id="benefits" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Для впевненої мандрівки</p>
+            <h2 id="benefits-title">Усе потрібне перед стартом</h2>
+            <p>Від першої ідеї до зібраного наплічника — важливі кроки поруч.</p>
+          </div>
+          <div class="benefit-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="benefit-card transition-shadow duration-200 hover:shadow-lg">
+              <img src="assets/icons/route-navigator.png" alt="" width="80" height="80" loading="lazy" />
+              <h3>Зрозумілий вибір</h3>
+              <p>Порівнюйте протяжність, час і рівень складності, щоб знайти відповідну стежку.</p>
+            </article>
+            <article class="benefit-card transition-shadow duration-200 hover:shadow-lg">
+              <img src="assets/icons/offline-map.png" alt="" width="80" height="80" loading="lazy" />
+              <h3>Орієнтир у дорозі</h3>
+              <p>Тримайте план маршруту під рукою та перевіряйте умови перед виходом.</p>
+            </article>
+            <article class="benefit-card transition-shadow duration-200 hover:shadow-lg">
+              <img src="assets/icons/smart-generator.png" alt="" width="80" height="80" loading="lazy" />
+              <h3>Підготовка без метушні</h3>
+              <p>Плануйте спорядження заздалегідь, щоб ніщо важливе не лишилося вдома.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section routes" id="routes" aria-labelledby="routes-title">
+        <div class="container">
+          <div class="section-heading-row">
+            <div class="section-intro section-intro-left">
+              <p class="eyebrow">Натхнення для наступного походу</p>
+              <h2 id="routes-title">Популярні стежки</h2>
+              <p>Оберіть напрямок і почніть планувати свою пригоду.</p>
+            </div>
+            <a class="text-link" href="#planning">Поради з планування <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="route-filters flex flex-wrap gap-2 mb-6" role="group" aria-label="Фільтр за складністю маршруту">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">Усі маршрути</button>
+            <button class="filter-button" type="button" data-filter="easy" aria-pressed="false">Легкі</button>
+            <button class="filter-button" type="button" data-filter="medium" aria-pressed="false">Помірні</button>
+            <button class="filter-button" type="button" data-filter="hard" aria-pressed="false">Складні</button>
+          </div>
+          <p class="filter-status" role="status" aria-live="polite">Показано 3 маршрути</p>
+          <div class="route-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="route-card group transition-all duration-200 hover:-translate-y-1 hover:shadow-xl" id="hoverla" data-difficulty="hard" aria-labelledby="hoverla-title">
+              <div class="route-art route-art-one"><img src="assets/images/karpaty-hero.png" alt="" loading="lazy" width="1376" height="768" /><span class="route-badge">Складний</span></div>
+              <div class="route-body">
+                <p class="route-region">Івано-Франківська область</p>
+                <h3 id="hoverla-title">Стежка до Говерли</h3>
+                <p>Підйом до найвищої вершини України для тих, хто готовий до виклику.</p>
+                <ul class="route-facts" aria-label="Параметри маршруту">
+                  <li><span aria-hidden="true">↗</span> 12 км</li>
+                  <li><span aria-hidden="true">◷</span> 5 год</li>
+                  <li><span aria-hidden="true">△</span> 890 м</li>
+                </ul>
+                <a class="card-link" href="#planning">Планувати похід <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="route-card group transition-all duration-200 hover:-translate-y-1 hover:shadow-xl" id="borzhava" data-difficulty="medium" aria-labelledby="borzhava-title">
+              <div class="route-art route-art-two"><img src="assets/images/karpaty-hero.png" alt="" loading="lazy" width="1376" height="768" /><span class="route-badge">Помірний</span></div>
+              <div class="route-body">
+                <p class="route-region">Закарпатська область</p>
+                <h3 id="borzhava-title">Полонина Боржава</h3>
+                <p>Відкриті хребти, широкі краєвиди та простір для довгої прогулянки.</p>
+                <ul class="route-facts" aria-label="Параметри маршруту">
+                  <li><span aria-hidden="true">↗</span> 14 км</li>
+                  <li><span aria-hidden="true">◷</span> 6 год</li>
+                  <li><span aria-hidden="true">△</span> 620 м</li>
+                </ul>
+                <a class="card-link" href="#planning">Планувати похід <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="route-card group transition-all duration-200 hover:-translate-y-1 hover:shadow-xl" id="synevyr" data-difficulty="easy" aria-labelledby="synevyr-title">
+              <div class="route-art route-art-three"><img src="assets/images/karpaty-hero.png" alt="" loading="lazy" width="1376" height="768" /><span class="route-badge">Легкий</span></div>
+              <div class="route-body">
+                <p class="route-region">Закарпатська область</p>
+                <h3 id="synevyr-title">Синевирська стежка</h3>
+                <p>Лісовий шлях до озера для спокійного знайомства з Карпатами.</p>
+                <ul class="route-facts" aria-label="Параметри маршруту">
+                  <li><span aria-hidden="true">↗</span> 8 км</li>
+                  <li><span aria-hidden="true">◷</span> 3 год</li>
+                  <li><span aria-hidden="true">△</span> 240 м</li>
+                </ul>
+                <a class="card-link" href="#planning">Планувати похід <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <p class="data-note">Параметри маршрутів наведено для навчального макета. Перед походом перевірте актуальний трек, прогноз і правила відвідування.</p>
+        </div>
+      </section>
+
+      <section class="section planning" id="planning" aria-labelledby="planning-title">
+        <div class="container planning-inner grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="planning-copy">
+            <p class="eyebrow">Три кроки до пригоди</p>
+            <h2 id="planning-title">Сплануйте похід впевнено</h2>
+            <p>Хороший маршрут починається з реалістичного плану. Оцініть свій досвід, погоду і доступний час.</p>
+            <a class="button button-light w-full sm:w-auto" href="#routes">Повернутися до маршрутів <span aria-hidden="true">→</span></a>
+          </div>
+          <ol class="planning-steps">
+            <li><span class="step-number">01</span><span><strong>Оберіть стежку</strong><small>Зіставте довжину та складність зі своїм досвідом.</small></span></li>
+            <li><span class="step-number">02</span><span><strong>Перевірте умови</strong><small>Уточніть прогноз, стан стежки та час до темряви.</small></span></li>
+            <li><span class="step-number">03</span><span><strong>Підготуйте речі</strong><small>Візьміть воду, навігацію, теплий одяг і аптечку.</small></span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <div>
+            <p class="eyebrow">Про проєкт</p>
+            <h2 id="about-title">Ближче до природи, уважніше до деталей</h2>
+          </div>
+          <p>«Зелені стежки Карпат» — навчальний вебпроєкт про свідоме планування мандрівок. Ми показуємо, як ясна інформація про маршрут і доступний інтерфейс допомагають зробити перший крок.</p>
+        </div>
+      </section>
+
+      <section class="section media-section" id="media" aria-labelledby="media-title">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Подивіться перед виходом</p>
+            <h2 id="media-title">Карпати ближче, ніж здається</h2>
+            <p>Відео допомагає відчути рельєф і настрій мандрівки. Для планування використовуйте перевірені актуальні треки.</p>
+          </div>
+          <div class="media-grid grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <article class="media-card p-4 sm:p-6">
+              <h3>Похід на озеро Несамовите через Говерлу</h3>
+              <p>Відео з YouTube про похід Чорногірським хребтом.</p>
+              <!-- YouTube embed: responsive 16:9 frame with accessible title and lazy loading. -->
+              <div class="embed-shell aspect-video w-full overflow-hidden rounded-xl shadow-lg">
+                <iframe class="embed-frame" src="https://www.youtube-nocookie.com/embed/oqT3U4lIcCc" title="Відео: похід на озеро Несамовите через Говерлу" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <a class="text-link" href="https://www.youtube.com/watch?v=oqT3U4lIcCc" target="_blank" rel="noopener noreferrer" title="Відкрити відео про похід до озера Несамовите на YouTube у новій вкладці">Відкрити на YouTube <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="media-card p-4 sm:p-6">
+              <h3>Атмосфера Карпат</h3>
+              <video class="local-video aspect-video w-full rounded-xl shadow-lg" controls preload="metadata" poster="assets/images/karpaty-hero.png" aria-label="Анімаційний відеофрагмент Карпат із матеріалів лабораторної роботи 3">
+                <source src="assets/video/hero-background.mp4" type="video/mp4" />
+                Ваш браузер не підтримує відео HTML5.
+              </video>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section weather-section" id="weather" aria-labelledby="weather-title">
+        <div class="container weather-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div>
+            <p class="eyebrow">Умови перед походом</p>
+            <h2 id="weather-title">Перевірте погоду біля Говерли</h2>
+            <p>Поточні погодні дані для координат Говерли надходять із сервісу Open-Meteo. У горах умови швидко змінюються, тому перед виходом звірте прогноз і повідомлення рятувальників.</p>
+            <a class="text-link" href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer" title="Відкрити джерело погодних даних Open-Meteo у новій вкладці">Джерело даних: Open-Meteo <span aria-hidden="true">↗</span></a>
+          </div>
+          <!-- Dynamic third-party weather informer: populated from Open-Meteo by js/main.js. -->
+          <aside class="weather-widget" aria-labelledby="widget-title">
+            <div class="weather-widget-header">
+              <div><p class="weather-kicker">Поточні умови</p><h3 id="widget-title">Говерла · 48.16021, 24.49994</h3></div>
+              <button class="weather-refresh transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" type="button" title="Оновити погодні дані">Оновити</button>
+            </div>
+            <p id="weather-status" role="status" aria-live="polite">Завантаження погодних даних…</p>
+            <dl class="weather-values" hidden>
+              <div><dt>Температура</dt><dd id="weather-temp">—</dd></div>
+              <div><dt>Вітер</dt><dd id="weather-wind">—</dd></div>
+              <div><dt>Опади</dt><dd id="weather-rain">—</dd></div>
+            </dl>
+            <p class="weather-updated" id="weather-updated"></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section location-section" id="location" aria-labelledby="location-title">
+        <div class="container location-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div>
+            <p class="eyebrow">Орієнтир на мапі</p>
+            <h2 id="location-title">Де розташована Говерла</h2>
+            <p>Карта показує вершину як географічний орієнтир. Це не навігаційний трек: для походу потрібні актуальні маршрут, умови доступу й офлайн-мапа.</p>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=48.16021%2C24.49994" target="_blank" rel="noopener noreferrer" title="Відкрити Говерлу на Google Maps у новій вкладці">Відкрити в Google Maps <span aria-hidden="true">↗</span></a>
+          </div>
+          <!-- Google Maps embed: responsive container, descriptive title, and lazy loading. -->
+          <figure class="map-figure">
+            <div class="embed-shell map-shell w-full overflow-hidden rounded-xl shadow-lg">
+              <iframe class="embed-frame" src="https://www.google.com/maps?q=48.16021,24.49994&amp;z=12&amp;output=embed" title="Інтерактивна карта Google Maps: вершина Говерла" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <figcaption>Вершина Говерла, Українські Карпати.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section final-cta" id="start" aria-labelledby="start-title">
+        <div class="container final-cta-inner">
+          <p class="eyebrow">Почніть із простого кроку</p>
+          <h2 id="start-title">Знайдіть стежку для своєї мандрівки</h2>
+          <p>Порівняйте демонстраційні маршрути, а перед реальним походом перевірте актуальні джерела.</p>
+          <a class="button button-primary w-full sm:w-auto transition-colors duration-200 hover:bg-[#15563e] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div class="footer-column footer-brand-column">
+          <a class="footer-brand" href="#top">Зелені стежки Карпат</a>
+          <p>Навчальна платформа для уважного планування мандрівок Карпатами.</p>
+        </div>
+        <nav class="footer-column" aria-label="Навігація в підвалі">
+          <h2>Сторінка</h2>
+          <ul><li><a href="#benefits">Переваги</a></li><li><a href="#routes">Маршрути</a></li><li><a href="#planning">Планування</a></li><li><a href="#media">Медіа</a></li><li><a href="#about">Про проєкт</a></li></ul>
+        </nav>
+        <nav class="footer-column" aria-label="Маршрути в підвалі">
+          <h2>Маршрути</h2>
+          <ul><li><a href="#hoverla">Говерла</a></li><li><a href="#borzhava">Боржава</a></li><li><a href="#synevyr">Синевир</a></li></ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Перед виходом</h2>
+          <p>Перевірте актуальний трек, прогноз погоди та правила відвідування.</p>
+          <a href="#weather">Погода біля Говерли</a><br />
+          <a href="#location">Говерла на карті</a><br />
+          <a class="back-to-top" href="#top">До початку <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+      <div class="container footer-bottom">Навчальний прототип · © 2026</div>
+    </footer>
+  </body>
+</html>
