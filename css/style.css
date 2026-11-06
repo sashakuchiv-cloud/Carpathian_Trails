@@ -802,3 +802,115 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .weather-values dd { margin-top: 0; }
   .map-shell { height: 20rem; }
 }
+
+/* Lab 9: responsive feedback form and browser-native modal dialog. */
+.contact-section { background: var(--color-background); }
+.policy-page { max-width: 50rem; }
+.policy-page h1 { margin-bottom: var(--space-6); }
+.policy-page p:not(.eyebrow) { margin-bottom: var(--space-6); }
+.contact-section .section-intro { max-width: 46rem; }
+.feedback-form {
+  width: 100%;
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: var(--space-6);
+  border: 1px solid #dce7dd;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+.feedback-form > .grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+.form-field { min-width: 0; }
+.form-field > label,
+.agreement-row > label {
+  display: block;
+  color: var(--color-text);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.form-field > label { margin-bottom: var(--space-2); }
+.form-field label span,
+.form-actions p span { color: #ad2940; }
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text);
+  background: var(--color-surface);
+  font: 400 1rem/1.45 var(--font-body);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+textarea.form-control { min-height: 10rem; resize: vertical; }
+.form-control:hover { border-color: var(--color-primary); }
+.form-control:focus {
+  border-color: var(--color-focus);
+  outline: 3px solid rgb(23 79 155 / 22%);
+  outline-offset: 2px;
+}
+.form-control.is-invalid,
+.form-control.border-red-500 { border-color: #b4233a; background: #fff8f8; }
+.form-control.is-valid,
+.form-control.border-green-500 { border-color: #24734f; background: #f7fcf8; }
+.form-control.is-invalid:focus,
+.form-control.is-valid:focus { outline-color: rgb(23 79 155 / 32%); }
+.form-hint,
+.form-error { margin: var(--space-2) 0 0; font-size: var(--font-size-small); line-height: 1.45; }
+.form-hint { color: var(--color-muted); }
+.form-error { color: #a61b32; font-weight: 700; }
+.form-error[hidden] { display: none; }
+.agreement-row { display: flex; align-items: flex-start; gap: var(--space-3); }
+.agreement-control {
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.2rem 0 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+.agreement-control:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.agreement-control.is-invalid { outline: 2px solid #b4233a; outline-offset: 3px; }
+.agreement-row label { font-weight: 500; }
+.agreement-row a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 0.15em; }
+.agreement-row a:hover { color: var(--color-primary-dark); }
+.form-actions { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6); }
+.form-actions p { margin: 0; color: var(--color-muted); font-size: var(--font-size-small); }
+.form-status { margin: var(--space-4) 0 0; color: var(--color-primary); font-weight: 700; }
+.form-status[hidden] { display: none; }
+.form-submit { min-height: 3rem; white-space: nowrap; }
+.form-submit:disabled { opacity: .65; cursor: not-allowed; }
+.feedback-dialog {
+  width: min(92vw, 34rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: var(--space-8);
+  overflow: auto;
+  border: 1px solid #dce7dd;
+  border-radius: var(--radius-card);
+  color: var(--color-text);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lift);
+}
+.feedback-dialog::backdrop { background: rgb(19 35 27 / 72%); }
+.feedback-dialog h2 { margin-bottom: var(--space-4); color: var(--color-primary); font-size: clamp(1.7rem, 4vw, 2.2rem); }
+.feedback-dialog p { margin-bottom: var(--space-6); }
+.feedback-dialog .button { min-height: 3rem; }
+@media (min-width: 768px) {
+  .feedback-form > .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feedback-form .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .form-actions { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+@media (max-width: 639px) {
+  .feedback-form { padding: var(--space-4); }
+  .form-submit { width: 100%; }
+  .feedback-dialog { padding: var(--space-6); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-control { transition: none; }
+}

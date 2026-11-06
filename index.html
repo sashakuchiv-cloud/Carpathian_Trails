@@ -13,6 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
+    <script src="js/validation.js" defer></script>
   </head>                                                                       
   <body id="top">
     <a class="skip-link" href="#content">Перейти до основного вмісту</a>
@@ -30,6 +31,7 @@
             <li><a href="#planning">Планування</a></li>
             <li><a href="#media">Медіа</a></li>
             <li><a href="#location">Локація</a></li>
+            <li><a href="#contact">Зв’язок</a></li>
           </ul>
         </nav>
         <a class="button button-primary header-cta hidden lg:inline-flex transition-colors duration-200 hover:bg-[#15563e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a>
@@ -44,6 +46,7 @@
           <li><a href="#planning">Планування</a></li>
           <li><a href="#media">Медіа</a></li>
           <li><a href="#location">Локація</a></li>
+          <li><a href="#contact">Зв’язок</a></li>
           <li><a class="mobile-nav-cta" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a></li>
         </ul>
       </nav>
@@ -257,6 +260,57 @@
         </div>
       </section>
 
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Навчальна форма зворотного зв’язку</p>
+            <h2 id="contact-title">Поділіться запитанням про мандрівку</h2>
+            <p>Спробуйте форму та перевірку полів. Це демонстрація: введені дані не надсилаються і не зберігаються.</p>
+          </div>
+
+          <form class="feedback-form mx-auto w-full max-w-4xl rounded-2xl p-5 sm:p-8" id="feedbackForm" novalidate>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+              <div class="form-field">
+                <label for="username">Ім’я <span aria-hidden="true">*</span></label>
+                <input class="form-control w-full min-h-12 rounded-lg border px-4 py-3 transition-colors" type="text" id="username" name="username" autocomplete="name" minlength="2" maxlength="80" required aria-invalid="false" aria-describedby="usernameHint usernameError" />
+                <p class="form-hint" id="usernameHint">Від 2 до 80 символів; літери, пробіл, дефіс або апостроф.</p>
+                <p class="form-error" id="usernameError" aria-live="polite" hidden></p>
+              </div>
+              <div class="form-field">
+                <label for="email">Електронна пошта <span aria-hidden="true">*</span></label>
+                <input class="form-control w-full min-h-12 rounded-lg border px-4 py-3 transition-colors" type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required aria-invalid="false" aria-describedby="emailHint emailError" />
+                <p class="form-hint" id="emailHint">Наприклад, user@example.com.</p>
+                <p class="form-error" id="emailError" aria-live="polite" hidden></p>
+              </div>
+              <div class="form-field md:col-span-2">
+                <label for="phone">Номер телефону <span aria-hidden="true">*</span></label>
+                <input class="form-control w-full min-h-12 rounded-lg border px-4 py-3 transition-colors" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="13" required aria-invalid="false" aria-describedby="phoneHint phoneError" />
+                <p class="form-hint" id="phoneHint">Строгий формат: +380501234567, без пробілів і дужок.</p>
+                <p class="form-error" id="phoneError" aria-live="polite" hidden></p>
+              </div>
+              <div class="form-field md:col-span-2">
+                <label for="message">Повідомлення <span aria-hidden="true">*</span></label>
+                <textarea class="form-control w-full rounded-lg border px-4 py-3 transition-colors" id="message" name="message" rows="6" minlength="10" maxlength="2000" required aria-invalid="false" aria-describedby="messageHint messageError"></textarea>
+                <p class="form-hint" id="messageHint">Від 10 до 2000 символів. Не вказуйте чутливі дані.</p>
+                <p class="form-error" id="messageError" aria-live="polite" hidden></p>
+              </div>
+              <div class="form-field form-agreement md:col-span-2">
+                <div class="agreement-row flex items-start gap-3">
+                  <input class="agreement-control mt-1 h-5 w-5 rounded border transition-colors" type="checkbox" id="agreement" name="agreement" value="yes" required aria-invalid="false" aria-describedby="agreementError" />
+                  <label for="agreement">Погоджуюся з <a href="privacy.html" target="_blank" rel="noopener noreferrer">демонстраційною політикою конфіденційності</a> <span aria-hidden="true">*</span></label>
+                </div>
+                <p class="form-error" id="agreementError" aria-live="polite" hidden></p>
+              </div>
+            </div>
+            <div class="form-actions flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+              <p>Поля із <span aria-hidden="true">*</span> обов’язкові. Форма працює лише як навчальна імітація.</p>
+              <button class="button button-primary form-submit w-full sm:w-auto min-h-12 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" type="submit" disabled>Надіслати</button>
+            </div>
+            <p class="form-status" id="feedbackStatus" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </section>
+
       <section class="section final-cta" id="start" aria-labelledby="start-title">
         <div class="container final-cta-inner">
           <p class="eyebrow">Почніть із простого кроку</p>
@@ -267,6 +321,12 @@
       </section>
     </main>
 
+    <dialog class="feedback-dialog rounded-2xl p-6 sm:p-8" id="feedbackSuccessDialog" aria-labelledby="feedbackDialogTitle" aria-describedby="feedbackDialogDescription">
+      <h2 id="feedbackDialogTitle">Дякуємо!</h2>
+      <p id="feedbackDialogDescription">Форма успішно пройшла клієнтську валідацію. Це демонстрація: повідомлення не надсилалося на сервер.</p>
+      <button class="button button-primary min-h-12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174f9b]" type="button" id="feedbackDialogClose" autofocus>Закрити</button>
+    </dialog>
+
     <footer class="site-footer">
       <div class="container footer-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
         <div class="footer-column footer-brand-column">
@@ -275,7 +335,7 @@
         </div>
         <nav class="footer-column" aria-label="Навігація в підвалі">
           <h2>Сторінка</h2>
-          <ul><li><a href="#benefits">Переваги</a></li><li><a href="#routes">Маршрути</a></li><li><a href="#planning">Планування</a></li><li><a href="#media">Медіа</a></li><li><a href="#about">Про проєкт</a></li></ul>
+          <ul><li><a href="#benefits">Переваги</a></li><li><a href="#routes">Маршрути</a></li><li><a href="#planning">Планування</a></li><li><a href="#media">Медіа</a></li><li><a href="#about">Про проєкт</a></li><li><a href="#contact">Зв’язок</a></li></ul>
         </nav>
         <nav class="footer-column" aria-label="Маршрути в підвалі">
           <h2>Маршрути</h2>
