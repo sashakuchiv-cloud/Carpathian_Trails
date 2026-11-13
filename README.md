@@ -22,3 +22,7 @@ GitHub Pages: репозиторій → **Settings → Pages → Deploy from a 
 ## Походження
 
 Базові дев’ять файлів скопійовано без змін із `Lab_07/site`. Файли попередніх лабораторних робіт залишено на місці. Цей репозиторій використовує локальну технічну адресу автора `lab08@local.invalid`; перед публікацією слід встановити власні `user.name` та `user.email` у Git.
+## Deployment
+
+GitHub Pages: https://sashakuchiv-cloud.github.io/Carpathian_Trails/
+vocal-klepon-c1c44e.netlify.app
