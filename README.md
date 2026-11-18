@@ -21,3 +21,7 @@
 ## Локальний перегляд і публікація
 
 У цій папці: `python -m http.server 8000`, потім `http://localhost:8000/`. Зовнішні Tailwind CDN, Google Fonts, YouTube, Google Maps та Open-Meteo потребують мережі. У Vercel імпортуйте **цей** Git-репозиторій із кореневим `index.html`, Framework Preset **Other**, Root Directory `./`, без команди збірки. Публічний URL з’явиться тільки після вашого входу та деплою.
+
+## Previous deployments
+GitHub Pages: https://sashakuchiv-cloud.github.io/Carpathian_Trails/
+Netlify: https://vocal-klepon-c1c44e.netlify.app
