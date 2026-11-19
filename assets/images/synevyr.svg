@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Пейзаж synevyr">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#cce8e9"/><stop offset="1" stop-color="#f8f3df"/></linearGradient></defs>
+<rect width="800" height="520" fill="url(#sky)"/><circle cx="641" cy="108" r="51" fill="#cae7da" opacity=".85"/>
+<path d="M0 316 L147 142 262 260 385 119 553 284 685 172 800 316Z" fill="#84b7bd"/>
+<path d="M0 375 L153 222 330 383 514 192 800 373Z" fill="#5b958d"/>
+<path d="M0 439 Q154 351 327 410 Q502 317 800 427 V520 H0Z" fill="#286778"/>
+<path d="M0 365 Q210 330 400 370 T800 365 V520 H0Z" fill="#3d8394"/><path d="M20 390 Q390 365 760 395" fill="none" stroke="#bce5dd" stroke-width="8" opacity=".7"/><path d="M0 463 Q250 440 390 520 H0Z" fill="#244f49" opacity=".4"/>
+</svg>

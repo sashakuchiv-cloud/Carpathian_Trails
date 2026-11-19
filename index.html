@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
     <script src="js/validation.js" defer></script>
@@ -29,6 +31,7 @@
             <li><a href="#benefits">Переваги</a></li>
             <li><a href="#routes">Маршрути</a></li>
             <li><a href="#planning">Планування</a></li>
+            <li><a href="#gallery">Галерея</a></li>
             <li><a href="#media">Медіа</a></li>
             <li><a href="#location">Локація</a></li>
             <li><a href="#contact">Зв’язок</a></li>
@@ -44,7 +47,8 @@
           <li><a href="#benefits">Переваги</a></li>
           <li><a href="#routes">Маршрути</a></li>
           <li><a href="#planning">Планування</a></li>
-          <li><a href="#media">Медіа</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#media">Медіа</a></li>
           <li><a href="#location">Локація</a></li>
           <li><a href="#contact">Зв’язок</a></li>
           <li><a class="mobile-nav-cta" href="#routes">Обрати маршрут <span aria-hidden="true">→</span></a></li>
@@ -63,7 +67,7 @@
               <a class="button button-primary w-full sm:w-auto transition-all duration-200 hover:bg-[#15563e] active:translate-y-0" href="#routes">Підібрати маршрут <span aria-hidden="true">→</span></a>
               <a class="text-link" href="#planning">Як це працює <span aria-hidden="true">↓</span></a>
             </div>
-            <p class="hero-note"><span aria-hidden="true">✓</span> Продуманий маршрут — більше часу для вражень</p>
+            <p class="hero-note"><span aria-hidden="true">✓</span> <span id="typed-text">Продуманий маршрут — більше часу для вражень</span></p>
           </div>
           <div class="hero-visual">
             <img src="assets/images/karpaty-hero.png" alt="Ілюстрація Карпатських гір, туристичного рюкзака та схеми маршруту" width="1376" height="768" fetchpriority="high" />
@@ -186,6 +190,65 @@
             <h2 id="about-title">Ближче до природи, уважніше до деталей</h2>
           </div>
           <p>«Зелені стежки Карпат» — навчальний вебпроєкт про свідоме планування мандрівок. Ми показуємо, як ясна інформація про маршрут і доступний інтерфейс допомагають зробити перший крок.</p>
+        </div>
+      </section>
+
+      <section class="section showcase-section" id="gallery" aria-labelledby="showcase-title">
+        <div class="container">
+          <div class="section-intro"><p class="eyebrow">Натхнення для мандрівки</p>
+            <h2 id="showcase-title">П’ять краєвидів — п’ять історій</h2>
+            <p>Перегляньте напрямки у слайдері й відкрийте ілюстрації у повноекранній галереї.</p>
+          </div>
+          <div class="trail-carousel">
+            <div class="swiper trails-swiper" aria-label="Добірка п’яти карпатських напрямків">
+              <div class="swiper-wrapper">
+            <article class="swiper-slide trail-slide">
+              <img src="assets/images/karpaty-hero.png" alt="Ілюстрація карпатських гір і туристичного маршруту" loading="lazy" width="800" height="520" />
+              <div class="trail-slide-body"><span class="trail-region">Говерла · Складний маршрут</span>
+                <h3>Стежка до Говерли</h3><p>Вид на найвищу вершину України й досвід справжнього гірського сходження.</p>
+              </div>
+            </article>
+            <article class="swiper-slide trail-slide">
+              <img src="assets/images/borzhava.svg" alt="Ілюстрація зелених полонин Боржави" loading="lazy" width="800" height="520" />
+              <div class="trail-slide-body"><span class="trail-region">Боржава · Помірний маршрут</span>
+                <h3>Відкриті полонини</h3><p>Широкі хребти й ранкове світло для неспішної мандрівки.</p>
+              </div>
+            </article>
+            <article class="swiper-slide trail-slide">
+              <img src="assets/images/synevyr.svg" alt="Ілюстрація озера Синевир серед гір" loading="lazy" width="800" height="520" />
+              <div class="trail-slide-body"><span class="trail-region">Синевир · Легкий маршрут</span>
+                <h3>Озеро серед лісу</h3><p>Спокійна прогулянка до високогірного озера поміж смерек.</p>
+              </div>
+            </article>
+            <article class="swiper-slide trail-slide">
+              <img src="assets/images/pip-ivan.svg" alt="Ілюстрація гірської обсерваторії на вершині" loading="lazy" width="800" height="520" />
+              <div class="trail-slide-body"><span class="trail-region">Піп Іван · Складний маршрут</span>
+                <h3>До обсерваторії</h3><p>Кам'янистий гребінь Чорногори та впізнавана вершина на горизонті.</p>
+              </div>
+            </article>
+            <article class="swiper-slide trail-slide">
+              <img src="assets/images/shypit.svg" alt="Ілюстрація водоспаду Шипіт у лісі" loading="lazy" width="800" height="520" />
+              <div class="trail-slide-body"><span class="trail-region">Шипіт · Легкий маршрут</span>
+                <h3>До водоспаду Шипіт</h3><p>Лісова стежка, тінь високих дерев і шум води наприкінці шляху.</p>
+              </div>
+            </article>
+              </div>
+            </div>
+            <div class="trail-controls" aria-label="Керування слайдером">
+              <button class="trail-prev" type="button" aria-label="Попередній слайд">←</button>
+              <div class="trail-pagination"></div>
+              <button class="trail-next" type="button" aria-label="Наступний слайд">→</button>
+            </div>
+          </div>
+          <div class="gallery-heading"><h3>Галерея ілюстрацій</h3><p>Натисніть на зображення, щоб переглянути альбом.</p></div>
+          <div class="trail-gallery">
+            <a href="assets/images/karpaty-hero.png" data-fancybox="carpathian-gallery" data-caption="Карпати — ілюстрація з попередніх лабораторних робіт">
+              <img src="assets/images/karpaty-hero.png" alt="Карпатські гори й туристичний маршрут" loading="lazy" width="1376" height="768" /></a>
+            <a href="assets/images/synevyr.svg" data-fancybox="carpathian-gallery" data-caption="Озеро Синевир — ілюстрація для ЛР №10">
+              <img src="assets/images/synevyr.svg" alt="Ілюстрація озера Синевир" loading="lazy" width="800" height="520" /></a>
+            <a href="assets/images/shypit.svg" data-fancybox="carpathian-gallery" data-caption="Водоспад Шипіт — ілюстрація для ЛР №10">
+              <img src="assets/images/shypit.svg" alt="Ілюстрація водоспаду Шипіт" loading="lazy" width="800" height="520" /></a>
+          </div>
         </div>
       </section>
 
@@ -335,7 +398,8 @@
         </div>
         <nav class="footer-column" aria-label="Навігація в підвалі">
           <h2>Сторінка</h2>
-          <ul><li><a href="#benefits">Переваги</a></li><li><a href="#routes">Маршрути</a></li><li><a href="#planning">Планування</a></li><li><a href="#media">Медіа</a></li><li><a href="#about">Про проєкт</a></li><li><a href="#contact">Зв’язок</a></li></ul>
+          <ul><li><a href="#benefits">Переваги</a></li><li><a href="#routes">Маршрути</a></li><li><a href="#planning">Планування</a></li><li><a href="#gallery">Галерея</a></li>
+            <li><a href="#media">Медіа</a></li><li><a href="#about">Про проєкт</a></li><li><a href="#contact">Зв’язок</a></li></ul>
         </nav>
         <nav class="footer-column" aria-label="Маршрути в підвалі">
           <h2>Маршрути</h2>
@@ -351,5 +415,9 @@
       </div>
       <div class="container footer-bottom">Навчальний прототип · © 2026</div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/plugins.js"></script>
   </body>
 </html>
