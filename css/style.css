@@ -83,6 +83,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   width: min(calc(100% - 3rem), var(--container-width));
   margin-inline: auto;
 }
+/* Keep a readable gutter even when Tailwind's CDN container rules load later. */
+body .container {
+  width: min(calc(100% - 2 * clamp(1.25rem, 4vw, 5rem)), var(--container-width));
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
 .skip-link {
   position: absolute;
   z-index: 10;
@@ -951,4 +957,10 @@ textarea.form-control { min-height: 10rem; resize: vertical; }
 }
 @media (prefers-reduced-motion: reduce) {
   .trail-gallery img { transition: none; }
+}
+
+@media (min-width: 1024px) and (max-width: 1150px) {
+  body .main-nav, body .header-cta { display: none; }
+  body .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  body .mobile-nav:not([hidden]) { display: block; }
 }
